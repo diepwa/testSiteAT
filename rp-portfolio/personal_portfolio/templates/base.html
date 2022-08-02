@@ -1,0 +1,392 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'project_index' %}">RP Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a id="nav-link" href="{% url 'project_index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a id="nav-links" href="{% url 'blog_index' %}">Blog</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+
+</nav>
+<script type="text/javascript" src="https://tag.aticdn.net/603196/smarttag.js"></script>
+<script type="text/javascript">
+var tag = new ATInternet.Tracker.Tag();
+
+tag.clickListener.send({
+    elem: document.getElementById("nav-link"),
+    name: 'Home',
+    type: 'navigation',
+});
+
+tag.clickListener.send({
+    elem: document.getElementById("nav-links"),
+    name: 'Blog',
+    type: 'navigation',
+});
+
+tag.page.set({
+    name:'Charles'
+});
+
+tag.dispatch();
+
+</script>
+
+<script type="text/javascript" src="https://tag.aticdn.net/piano-analytics.js"></script>
+<script type="text/javascript">
+pa.setConfigurations({
+  site: 603196,
+  collectDomain: "https://logs1412.xiti.com",
+});
+
+// document.cookie = "username=John Smith; path=/blog";
+/*PAGE DISPLAY*/
+pa.sendEvent('page.display', {
+  'page' : 'Publisher',
+  'date_indicateur' : 20220524,
+});
+
+</script>
+        
+<script type="text/javascript">
+var myMedia = new pa.avInsights.Media(5, 5); // set the first media instance
+
+var properties = {
+  av_content_id: 'fge234',
+  av_content: 'myContent',
+  av_content_type: 'Video',
+  av_content_duration: 10000,
+  av_content_genre: ['entertainment'],
+  av_content_version: 'short',
+  av_player: 'HTML5_V123',
+  av_player_version: '1b',
+  av_player_position: 'top',
+  av_broadcasting_type: 'On Demand',
+  av_publication_date: 1562055880,
+  av_show: 'The gist of the game',
+  av_show_season: 'Season 1',
+  av_episode_id: '3134',
+  av_channel: 'INFO',
+  av_author: 'AT Internet',
+  av_broadcaster: 'Direction 123',
+  av_language: 'EN',
+  av_subtitles: 'FR',
+  av_launch_reason: 'Auto'
+};
+
+// Set media properties
+myMedia.setProps(properties);
+</script>
+<br><br>
+<div class="container">
+  <h2>AV INSIGHT</h2>
+  <div class="vertical-center">
+  <button onclick="myMedia.play(0); myMedia.bufferStart(0);">PLAY</button>
+  <button onclick="myMedia.playbackStart(500);">START</button>
+  <button onclick="myMedia.playbackPaused(1000);">PAUSE</button>
+  <button onclick="myMedia.playbackResumed(3000);">RESUME</button>
+  <button onclick="myMedia.playbackStopped(5000);">STOP</button>
+  </div>
+</div>
+ <div class="container">
+<!-- CONFIG DES DIFFÉRENTS PARAMÈTRES SALES INSIGHT -->
+<script type="text/javascript">
+  var panier = 'panier1212323';
+  var produit = '89100312373';
+  var transaction = 'transaction123123';
+</script>
+<br><br>
+  <h2>SALES INSIGHT</h2>
+<br>
+  <h4>PRODUCT EVENTS</h4>
+  <div class="vertical-center">
+  <button onclick="pa.sendEvent(
+    'product.display',
+{
+    'product_id': produit, // mandatory property
+    'product': 'Laptop AX174',
+    'product_variant': '8Go RAM',
+    'product_brand': 'Laptop',
+    'product_discount': false,
+    'product_pricetaxincluded': 1399.90,
+    'product_pricetaxfree': 1120.90,
+    'product_currency': 'EUR',
+    'product_stock': true,
+    'product_category1': 'Hardware',
+    'product_category2': 'Computer',
+    'product_category3': 'Gaming',
+    'product_category4': 'Laptop'
+});">PRODUCT DISPLAY</button>
+  <button onclick="pa.sendEvent(
+    'product.page_display',
+{
+    'product_id': produit, // mandatory property
+    'product': 'Laptop AX174',
+    'product_variant': '8Go RAM',
+    'product_brand': 'Laptop',
+    'product_discount': false,
+    'product_pricetaxincluded': 1399.90,
+    'product_pricetaxfree': 1120.90,
+    'product_currency': 'EUR',
+    'product_stock': true,
+    'product_category1': 'Hardware',
+    'product_category2': 'Computer',
+    'product_category3': 'Gaming',
+    'product_category4': 'Laptop'
+});">PRODUCT PAGE DISPLAY</button>
+  <button onclick="pa.sendEvents([
+{
+'name': 'product.add_to_cart',
+'data': {
+    'cart_id': panier,
+    'product_id': produit, // mandatory property
+    'product': 'Laptop AX174',
+    'product_variant': '8Go RAM',
+    'product_brand': 'Laptop',
+    'product_discount': false,
+    'product_pricetaxincluded': 1399.90,
+    'product_pricetaxfree': 1120.90,
+    'product_currency': 'EUR',
+    'product_stock': true,
+    'product_category1': 'Hardware',
+    'product_category2': 'Computer',
+    'product_category3': 'Gaming',
+    'product_category4': 'Laptop',
+    'product_quantity':1,
+    'product_cartcreation':true
+}},
+{
+'name': 'cart.creation', // Only if product_cartcreation: true
+'data': {
+    'cart_id': panier, // mandatory property
+    'cart_currency': 'EUR',
+    'cart_turnovertaxincluded': 1399.90,
+    'cart_turnovertaxfree': 1120.90,
+    'cart_quantity': 1,
+    'cart_nbdistinctproduct': 1
+}
+}]);">PRODUCT ADD TO CART</button>
+  <button onclick="pa.sendEvent(
+    'product.remove_from_cart',
+{
+    'cart_id': panier,
+    'product_id': produit, // mandatory property
+    'product': 'Laptop AX174',
+    'product_variant': '8Go RAM',
+    'product_brand': 'Laptop',
+    'product_discount': false,
+    'product_pricetaxincluded': 1399.90,
+    'product_pricetaxfree': 1120.90,
+    'product_currency': 'EUR',
+    'product_stock': true,
+    'product_category1': 'Hardware',
+    'product_category2': 'Computer',
+    'product_category3': 'Gaming',
+    'product_category4': 'Laptop',
+    'product_quantity':1
+});">PRODUCT REMOVE FROM CART</button>
+  </div>
+  <h4>CART EVENTS</h4>
+  <div class="vertical-center">
+  <button onclick="pa.sendEvent(
+    'cart.creation',
+{
+    'cart_id': panier, // mandatory property
+    'cart_currency': 'EUR',
+    'cart_turnovertaxincluded': 1399.90,
+    'cart_turnovertaxfree': 1120.90,
+    'cart_quantity': 1,
+    'cart_nbdistinctproduct': 1
+});">CART CREATION</button>
+  <button onclick="pa.sendEvent(
+    'cart.display',
+{
+    'cart_id': panier, // mandatory property
+    'cart_currency': 'EUR',
+    'cart_turnovertaxincluded': 1399.90,
+    'cart_turnovertaxfree': 1120.90,
+    'cart_quantity': 1,
+    'cart_nbdistinctproduct': 1
+});">CART DISPLAY</button>
+  <button onclick="pa.sendEvent(
+    'cart.display',
+{
+    'cart_id': panier, // mandatory property
+    'cart_currency': 'EUR',
+    'cart_turnovertaxincluded': 1399.90,
+    'cart_turnovertaxfree': 1120.90,
+    'cart_quantity': 1,
+    'cart_nbdistinctproduct': 1
+});">CART UPDATE</button>
+  <button onclick="pa.sendEvent(
+    'cart.delivery',
+{
+    'cart_id': panier, // mandatory property
+    'cart_currency': 'EUR',
+    'cart_turnovertaxincluded': 1399.90,
+    'cart_turnovertaxfree': 1120.90,
+    'cart_quantity': 1,
+    'cart_nbdistinctproduct': 1,
+    'shipping_delivery': 'Express',
+    'shipping_costtaxincluded': 11.99,
+    'shipping_costtaxfree': 10.99
+});">CART DELIVERY</button>
+  <button onclick="pa.sendEvent(
+    'cart.payment',
+{
+    'cart_id': panier, // mandatory property
+    'cart_currency': 'EUR',
+    'cart_turnovertaxincluded': 1399.90,
+    'cart_turnovertaxfree': 1120.90,
+    'cart_quantity': 1,
+    'cart_nbdistinctproduct': 1,
+    'shipping_delivery': 'Express',
+    'shipping_costtaxincluded': 11.99,
+    'shipping_costtaxfree': 10.99,
+    'payment_mode': 'Credit card'
+});">CART PAYMENT</button>
+  </div>
+  <h4>TRANSACTION EVENTS</h4>
+  <div class="vertical-center">
+ 
+  <button onclick="pa.sendEvents([
+{
+'name': 'transaction.confirmation',
+'data': {
+    'cart_id': panier, // mandatory property
+    'cart_currency': 'EUR',
+    'cart_turnovertaxincluded': 1399.90,
+    'cart_turnovertaxfree': 1120.90,
+    'cart_quantity': 1,
+    'cart_nbdistinctproduct': 1,
+    'shipping_delivery': 'Express',
+    'shipping_costtaxincluded': 11.99,
+    'shipping_costtaxfree': 10.99,
+    'transaction_id': transaction, // mandatory property
+    'transaction_promocode': ['REDUC10'],
+    'transaction_firstpurchase': true,
+    'payment_mode': 'Credit card'
+}},
+{
+'name': 'product.purchased',
+'data': {
+    'cart_id': panier, // mandatory property
+    'product_id': produit, // mandatory property
+    'product': 'Laptop AX174',
+    'product_variant': '8Go RAM',
+    'product_brand': 'Laptop',
+    'product_discount': false,
+    'product_pricetaxincluded': 1399.90,
+    'product_pricetaxfree': 1120.90,
+    'product_currency': 'EUR',
+    'product_stock': true,
+    'product_category1': 'Hardware',
+    'product_category2': 'Computer',
+    'product_category3': 'Gaming',
+    'product_category4': 'Laptop',
+    'product_quantity':1,
+    'payment_mode': 'Credit card',
+    'transaction_id': transaction, // mandatory property
+    'transaction_promocode': ['REDUC10']
+}
+}])">TRANSACTION CONFIRMATION</button>
+
+  <h4>SERVER-SIDE TRANSACTION</h4>
+  <button onclick="pa.sendEvents([
+{
+'name': 'cart.awaiting_payment',
+'data': {
+    'cart_id': panier, // mandatory property
+    'cart_version':'VER211SQ', // mandatory property
+    'cart_currency': 'EUR',
+    'cart_turnovertaxincluded': 1399.90,
+    'cart_turnovertaxfree': 1120.90,
+    'cart_quantity': 1,
+    'cart_nbdistinctproduct': 1,
+    'shipping_delivery': 'Express',
+    'shipping_costtaxincluded': 11.99,
+    'shipping_costtaxfree': 10.99
+}},
+{
+'name': 'product.awaiting_payment',
+'data': {
+    'cart_id': panier, // mandatory property
+    'cart_version':'VER211SQ', // mandatory property
+    'product_id': produit, // mandatory property
+    'product': 'Laptop AX174',
+    'product_variant': '8Go RAM',
+    'product_brand': 'Laptop',
+    'product_discount': false,
+    'product_pricetaxincluded': 1399.90,
+    'product_pricetaxfree': 1120.90,
+    'product_currency': 'EUR',
+    'product_stock': true,
+    'product_category1': 'Hardware',
+    'product_category2': 'Computer',
+    'product_category3': 'Gaming',
+    'product_category4': 'Laptop',
+    'product_quantity':1
+}
+}])">CART AWAITING PAYMENT</button>
+
+<!-- https://logs1412.xiti.com/hit.xiti?s=628313 -->
+  <a href=https://logs1412.xiti.com/hit.xiti?s=628313&col=2&events=[{"name":"transaction.confirmation","data":{"cart_id":"123123","transaction_id":"123123","offsite_confirmation":true}}]&rdt=off>
+    <button>OFFSITE CONFIRMATION (SERVER-SIDE)</button>
+  </a>
+
+<br><br>
+  <h2>CLICK EVENTS</h2>
+  <div class="vertical-center">
+    <button onclick="pa.sendEvent('click.navigation', {
+      'click' : 'clickDeNavigation',
+      'click_chapter1' : 'chapter 1',
+      'click_chapter2' : 'chapter 2',
+      'click_chapter3' : 'chapter 3'
+    });">NAVIGATION CLICK</button>
+
+    <button onclick="pa.sendEvent('click.action', {
+      'click' : 'clickDAction',
+      'click_chapter1' : 'chapter 1',
+      'click_chapter2' : 'chapter 2',
+      'click_chapter3' : 'chapter 3'
+    });">ACTION CLICK</button>
+
+    <button onclick="pa.sendEvent('click.download', {
+      'click' : 'clickDeDownload',
+      'click_chapter1' : 'chapter 1',
+      'click_chapter2' : 'chapter 2',
+      'click_chapter3' : 'chapter 3'
+    });">DOWNLOAD CLICK</button>
+
+    <button onclick="pa.sendEvent('click.exit', {
+      'click' : 'clickDeSortie',
+      'click_chapter1' : 'chapter 1',
+      'click_chapter2' : 'chapter 2',
+      'click_chapter3' : 'chapter 3'
+    });">EXIT CLICK</button>
+  </div>
+
+<br>
+
+    <button onclick="pa.sendEvent('internal_search_result.click', {
+      'ise_keyword' : 'daft',
+      'ise_click_rank' : 2,
+      'ise_page' : 1
+    });">INTERNAL SEARCH ENGINE CLICK</button>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
