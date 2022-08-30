@@ -20,7 +20,7 @@
 
 
 </nav>
-<script type="text/javascript" src="https://tag.aticdn.net/603196/smarttag.js"></script>
+<script type="text/javascript" src="https://tag.aticdn.net/XXXXXX/smarttag.js"></script>
 <script type="text/javascript">
 var tag = new ATInternet.Tracker.Tag();
 
@@ -37,7 +37,7 @@ tag.clickListener.send({
 });
 
 tag.page.set({
-    name:'Charles'
+    name:'Swarlz'
 });
 
 tag.dispatch();
@@ -47,15 +47,13 @@ tag.dispatch();
 <script type="text/javascript" src="https://tag.aticdn.net/piano-analytics.js"></script>
 <script type="text/javascript">
 pa.setConfigurations({
-  site: 603196,
-  collectDomain: "https://logs1412.xiti.com",
+  site: XXXXXX,
+  collectDomain: "https://logsXXXX.xiti.com",
 });
 
-// document.cookie = "username=John Smith; path=/blog";
 /*PAGE DISPLAY*/
 pa.sendEvent('page.display', {
-  'page' : 'Publisher',
-  'date_indicateur' : 20220524,
+  'page' : 'PampaLeRoi',
 });
 
 </script>
@@ -64,10 +62,10 @@ pa.sendEvent('page.display', {
 var myMedia = new pa.avInsights.Media(5, 5); // set the first media instance
 
 var properties = {
-  av_content_id: 'fge234',
+  av_content_id: 'SwarlouLeBest', // mandatory
+  av_content_duration: 10000, // mandatorish
   av_content: 'myContent',
   av_content_type: 'Video',
-  av_content_duration: 10000,
   av_content_genre: ['entertainment'],
   av_content_version: 'short',
   av_player: 'HTML5_V123',
@@ -103,9 +101,9 @@ myMedia.setProps(properties);
  <div class="container">
 <!-- CONFIG DES DIFFÉRENTS PARAMÈTRES SALES INSIGHT -->
 <script type="text/javascript">
-  var panier = 'panier1212323';
-  var produit = '89100312373';
-  var transaction = 'transaction123123';
+  var panier = 'PanierXX';
+  var produit = 'ProduitXX';
+  var transaction = 'TransactionXX';
 </script>
 <br><br>
   <h2>SALES INSIGHT</h2>
@@ -341,8 +339,9 @@ myMedia.setProps(properties);
 }
 }])">CART AWAITING PAYMENT</button>
 
-<!-- https://logs1412.xiti.com/hit.xiti?s=628313 -->
-  <a href=https://logs1412.xiti.com/hit.xiti?s=628313&col=2&events=[{"name":"transaction.confirmation","data":{"cart_id":"123123","transaction_id":"123123","offsite_confirmation":true}}]&rdt=off>
+<!-- https://logsXXXX.xiti.com/hit.xiti?s=XXXXXX -->
+<!-- A MODIFIER MANUELLEMENT POUR QUE LA TRANSACTION SERVER SIDE FONCTIONNE CORRECTEMENT -->
+  <a href=https://logsXXXX.xiti.com/hit.xiti?s=XXXXXX&col=2&events=[{"name":"transaction.confirmation","data":{"cart_id":"123123","transaction_id":"123123","offsite_confirmation":true}}]&rdt=off>
     <button>OFFSITE CONFIRMATION (SERVER-SIDE)</button>
   </a>
 
